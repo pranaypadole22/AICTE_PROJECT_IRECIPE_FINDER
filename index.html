@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Recipe Finder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo"><img src="/assets/images/logo.png" alt=""> Interactive Recipe Finder</div>
+    <form id="searchForm" class="search-form">
+      <input type="text" id="searchInput" placeholder="Enter ingredients e.g. tomato, cheese">
+      <button type="submit">Search</button>
+    </form>
+    <button id="favoritesBtn" class="favorites-btn">❤️ Favorites (<span id="favCount">0</span>)</button>
+  </header>
+
+  <!-- Hero Section -->
+<section class="hero">
+  <img src="assets/images/image.png" alt="Hero Image" class="hero-img">
+  <div class="hero-overlay">
+    <h1>Interactive Recipe Finder</h1>
+    <button id="exploreBtn" class="explore-btn">Explore More!</button>
+  </div>
+</section>
+
+
+  <!-- Filters -->
+  <section class="filters" id="filtersSection">
+    <div class="filter-group">
+      <span>Diet:</span>
+      <button class="filterBtn" data-diet="balanced">Balanced</button>
+      <button class="filterBtn" data-diet="low-carb">Low-Carb</button>
+      <button class="filterBtn" data-diet="high-protein">High-Protein</button>
+    </div>
+    <div class="filter-group">
+      <span>Health:</span>
+      <button class="healthBtn" data-health="vegetarian">Vegetarian</button>
+      <button class="healthBtn" data-health="vegan">Vegan</button>
+      <button class="healthBtn" data-health="gluten-free">Gluten-Free</button>
+    </div>
+  </section>
+
+  <main>
+    <div id="resultsInfo" class="results-info">Type ingredients and press Search.</div>
+    <section id="gridSection" class="grid"></section>
+  </main>
+
+  <aside id="favPanel" class="fav-panel">
+    <div class="panel-header">
+      <h2>Your Favorites</h2>
+      <button id="favClose" class="close-btn">✖</button>
+    </div>
+    <div id="favList" class="fav-list"></div>
+  </aside>
+
+  <aside id="detailPanel" class="detail-panel">
+    <div class="panel-header">
+      <h2 id="detailTitle"></h2>
+      <button id="panelClose" class="close-btn">✖</button>
+    </div>
+    <img id="detailImage" alt="Recipe image" class="detail-img">
+    <div class="panel-content">
+      <h3>Ingredients</h3>
+      <ul id="ingredientsList"></ul>
+      <h3>Nutrition</h3>
+      <div id="nutritionBox" class="nutrition-box"></div>
+      <a id="sourceLink" href="#" target="_blank" class="source-btn">Open Full Recipe</a>
+      <button id="panelFavBtn" class="fav-btn">♡ Save</button>
+    </div>
+  </aside>
+
+  <footer>
+    <p>Created by Pranay Padole ❤️</p>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
